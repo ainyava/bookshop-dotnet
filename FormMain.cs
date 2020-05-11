@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Bookshop
 {
-    public partial class frmMain : Form
+    public partial class FormMain : Form
     {
         public static string status = "insert";
         List<Book> books = new List<Book>();
@@ -122,12 +122,12 @@ namespace Bookshop
             }
         }
 
-        public frmMain()
+        public FormMain()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
             conn = new SQLiteConnection("Data Source=bookshop.db;Version=3;");
             conn.Open();
@@ -141,7 +141,7 @@ namespace Bookshop
             
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Close();
         }
